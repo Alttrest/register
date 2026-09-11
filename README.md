@@ -1,1 +1,5 @@
-<div align="center">\n  <a href="https://github.com/Alttrest/register">\n    <img src="readme.svg" alt="register" width="100%"/>\n  </a>\n</div>\n
+<p align="center">
+  <a href="https://github.com/Alttrest/register">
+    <img src="readme.svg" width="100%" alt="register - Interactive Architecture &amp; Visual Identity" />
+  </a>
+</p>
