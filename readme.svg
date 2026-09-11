@@ -1,13 +1,135 @@
-<svg width="800" height="300" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="800" height="300" rx="15" fill="#0D1117" stroke="#30363D" stroke-width="2"/>
-    <rect x="0" y="0" width="800" height="60" rx="15" fill="#161B22"/>
-    <text x="50" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#58A6FF">register</text>
-    <line x1="0" y1="60" x2="800" y2="60" stroke="#30363D" stroke-width="2"/>
-    <text x="50" y="120" font-family="Arial, sans-serif" font-size="16" fill="#8B949E">Grab your own sweet-looking '.is-a.dev' subdomain.</text>\n
-    <line x1="50" y1="230" x2="750" y2="230" stroke="#30363D" stroke-width="1"/>
-    <circle cx="60" cy="260" r="8" fill="#F1E05A"/>
-    <text x="80" y="265" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#C9D1D9">JavaScript</text>
-    <text x="200" y="265" font-family="Arial, sans-serif" font-size="16" fill="#8B949E">⭐ Stars: 2</text>
-    <text x="320" y="265" font-family="Arial, sans-serif" font-size="16" fill="#8B949E">🍴 Forks: 0</text>
-    <text x="650" y="265" font-family="Arial, sans-serif" font-size="14" fill="#8B949E">by @Alttrest</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="50%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 0.8; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+    @keyframes scan {
+      0% { transform: translateY(0); opacity: 0.8; }
+      100% { transform: translateY(180px); opacity: 0; }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .grid-bg { fill: url(#grid); }
+    .pulse-elem { animation: pulse 2.5s ease-in-out infinite; }
+  </style>
+
+  <rect width="1200" height="560" rx="16" fill="url(#bg)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="1200" height="560" rx="16" class="grid-bg" />
+
+  <!-- Top Badge -->
+  <g transform="translate(60, 45)">
+    <rect width="200" height="26" rx="13" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <circle cx="15" cy="13" r="4" fill="#38bdf8" />
+    <text x="28" y="17" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="700">GITOPS DNS ROUTING</text>
+  </g>
+
+  <!-- Left Column: Project Identity & Specs -->
+  <g transform="translate(60, 115)">
+    <text x="0" y="38" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="40" font-weight="800" letter-spacing="-1">is-a.dev // register</text>
+    <text x="0" y="74" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15">Automated Subdomain DNS Provisioning &amp; GitHub Actions CI</text>
+
+    <!-- Stack Chips -->
+    <g transform="translate(0, 100)">
+      
+        <rect x="0" y="0" width="114" height="30" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="57" y="19" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="600">DNSControl</text>
+        
+        <rect x="126" y="0" width="150" height="30" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="201" y="19" text-anchor="middle" fill="#a855f7" font-family="monospace" font-size="12" font-weight="600">GitHub Actions</text>
+        
+        <rect x="288" y="0" width="123" height="30" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="349" y="19" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="12" font-weight="600">JSON Schema</text>
+        
+        <rect x="423" y="0" width="78" height="30" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="462" y="19" text-anchor="middle" fill="#f59e0b" font-family="monospace" font-size="12" font-weight="600">Vercel</text>
+        
+    </g>
+
+    <!-- Metrics Cards -->
+    <g transform="translate(0, 160)">
+      
+        <g transform="translate(0, 0)">
+          <rect width="145" height="60" rx="8" fill="#0f172a" stroke="#1e293b"/>
+          <text x="14" y="24" fill="#64748b" font-family="monospace" font-size="10">DOMAIN</text>
+          <text x="14" y="48" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="14" font-weight="700">alttre.is-a.dev</text>
+        </g>
+        
+        <g transform="translate(155, 0)">
+          <rect width="145" height="60" rx="8" fill="#0f172a" stroke="#1e293b"/>
+          <text x="14" y="24" fill="#64748b" font-family="monospace" font-size="10">RECORD</text>
+          <text x="14" y="48" fill="#a855f7" font-family="-apple-system, sans-serif" font-size="14" font-weight="700">CNAME Route</text>
+        </g>
+        
+        <g transform="translate(310, 0)">
+          <rect width="145" height="60" rx="8" fill="#0f172a" stroke="#1e293b"/>
+          <text x="14" y="24" fill="#64748b" font-family="monospace" font-size="10">CI PIPELINE</text>
+          <text x="14" y="48" fill="#10b981" font-family="-apple-system, sans-serif" font-size="14" font-weight="700">Passed All</text>
+        </g>
+        
+    </g>
+
+    <!-- Detailed Highlights -->
+    <g transform="translate(0, 255)">
+      <text x="0" y="0" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="700">CORE SYSTEM ARCHITECTURE:</text>
+      
+        <text x="0" y="22" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">● Declarative DNS configuration via version-controlled JSON...</text>
+        
+        <text x="0" y="42" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">● Strict GitHub Actions validation pipeline for domain owne...</text>
+        
+        <text x="0" y="62" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">● Zero-downtime automated deployment to Vercel global edge DNS</text>
+        
+    </g>
+  </g>
+
+  <!-- Right Column: Bespoke Visual Representation -->
+  <g transform="translate(680, 50)">
+    
+        <g transform="translate(20, 25)">
+          <rect width="420" height="135" rx="8" fill="#0b0f19" stroke="#38bdf8" stroke-width="1.5"/>
+          <text x="15" y="24" fill="#94a3b8" font-family="monospace" font-size="10">domains/alttre.json</text>
+          
+          <g transform="translate(15, 45)">
+            <text x="0" y="12" fill="#f8fafc" font-family="monospace" font-size="11">{</text>
+            <text x="15" y="30" fill="#38bdf8" font-family="monospace" font-size="11">"owner":</text>
+            <text x="80" y="30" fill="#f1f5f9" font-family="monospace" font-size="11">"Alttrest",</text>
+            <text x="15" y="48" fill="#38bdf8" font-family="monospace" font-size="11">"record":</text>
+            <text x="80" y="48" fill="#f1f5f9" font-family="monospace" font-size="11">{ "CNAME": "cname.vercel-dns.com" }</text>
+            <text x="0" y="66" fill="#f8fafc" font-family="monospace" font-size="11">}</text>
+          </g>
+
+          <g transform="translate(0, 155)">
+            <rect width="420" height="110" rx="8" fill="#0f172a" stroke="#1e293b"/>
+            <text x="15" y="26" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700">GITHUB ACTIONS CI STATUS</text>
+            <g transform="translate(15, 45)">
+              <circle cx="6" cy="6" r="5" fill="#10b981"/>
+              <text x="20" y="10" fill="#f1f5f9" font-family="monospace" font-size="10">validate-domain-schema ... SUCCESS</text>
+              <circle cx="6" cy="30" r="5" fill="#10b981"/>
+              <text x="20" y="34" fill="#f1f5f9" font-family="monospace" font-size="10">dnscontrol-preview ......... 1 TO ADD, 0 TO DELETE</text>
+            </g>
+          </g>
+        </g>
+        
+  </g>
+
+  <!-- Bottom Bar -->
+  <g transform="translate(60, 515)">
+    <line x1="0" y1="0" x2="1080" y2="0" stroke="#1e293b" stroke-width="1"/>
+    <text x="0" y="22" fill="#64748b" font-family="monospace" font-size="11">REPOSITORY: Alttrest/is-a.dev // register</text>
+    <text x="400" y="22" fill="#64748b" font-family="monospace" font-size="11">MAINTAINER: Ali Turan (@Alttrest)</text>
+    <text x="960" y="22" fill="#38bdf8" font-family="monospace" font-size="11">● PRODUCTION VERIFIED</text>
+  </g>
 </svg>
